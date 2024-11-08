@@ -23,7 +23,7 @@ router.get('/restaurants', (req, res) => {
     the function getRestaurant().
         
 */
-router.get('/restaurants/:id', (req, res) => {
+router.patch('/restaurants/:id', (req, res) => {
     const restaurantID = parseInt(req.params.id);
     const restaurant = getRestaurant(restaurantID);
 

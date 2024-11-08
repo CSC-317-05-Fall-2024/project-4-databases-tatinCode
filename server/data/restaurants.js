@@ -113,14 +113,12 @@ const getRestaurant = async (id) => {
         const results = await pool.query(`
             SELECT * FROM restaurants
             WHERE id=$1
-            `, [id])
+            `, [id]);
 
         return results.rows[0];
     } catch (error) {
         console.error(error.message);
     }
-
-    return restaurantData.find(restaurant => restaurant.id === id);
 }
 
 /*
@@ -131,7 +129,7 @@ const getRestaurant = async (id) => {
 */
 const createRestaurant = async (newRestaurant) => { 
     try{
-        const { name, phone, address, photo } = data;
+        const { name, phone, address, photo } = newRestaurant;
         const results = await pool.query(`
             INSERT INTO restaurants (name, phone, address, photo)
             VALUES ($1, $2, $3, $4)
@@ -162,4 +160,22 @@ const deleteRestaurant = async (id) => {
     }
 }
 
-export { getRestaurants, getRestaurant, createRestaurant, deleteRestaurant };
+/*
+
+    the function to search the restaurantData array for reviews for a specific
+    restaurant by id.
+
+*/
+const reviewsForRestaurant = async (id) => {
+    try {
+        const result = await pool.query(`
+            SELECT * FROM reviews WHERE restaurant_id = $1;
+            `, [id]);
+
+        return result.rows;
+    } catch (error) {
+        console.error(error.message);
+    }
+}
+
+export { getRestaurants, getRestaurant, reviewsForRestaurant , createRestaurant, deleteRestaurant };
