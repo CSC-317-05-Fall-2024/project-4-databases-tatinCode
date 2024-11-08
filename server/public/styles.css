@@ -1,0 +1,251 @@
+/*
+
+    for the header element
+
+*/
+.header {
+    height: 300px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-image: url('images/banner.jpg');
+    h1 {
+        line-height: 300px;
+        text-align: center;
+        color: #4b4755;
+        font-size: 50pt;
+        margin: 0px;
+        white-space: nowrap;
+    }
+}
+/*
+
+    for the nav element to style the navigation bar
+
+*/
+nav {
+
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    background-color: rgb(47, 79, 130);
+    a { 
+        color: #dadada;
+        text-decoration: none;
+        padding: 10px 100px;
+    }
+    
+    a:hover{
+        background-color: rgb(61, 117, 197)
+    }
+    
+}
+
+/*
+
+    for the body element and sets its default values
+
+*/
+body  {
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: beige;
+    margin: 0px auto;
+    position: relative;
+    min-height: 100vh;
+}
+
+body::after{
+    content: '';
+  display: block;
+  height: 50px;
+}
+
+/*
+
+    for the footer element that displays at the bottom of the page
+
+*/
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 25px;
+    text-align: right;
+    color: beige;
+    background-color:  rgb(47, 79, 130);
+}
+/*
+
+    for the @index.html file styling
+
+*/
+.container{
+    padding: 10px 0;
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 15px;
+    text-align: center;   
+}
+
+.container .Lorem-home{
+    width: 700px;
+}
+
+/*
+
+    for the @attractions.html file styling
+
+*/
+.section-text {
+    text-align: left;
+    align-items: center;
+    display: flex;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding-right: 100px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    img{
+        width: 300px;
+        height: 200px;
+        background-color: #e0e0e0;
+        border-radius: 8px;
+        margin-right: 20px;
+    }
+}
+
+.att-description{
+    h2{
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    p{
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+}
+
+/*
+
+    for the @restaurants.html file styling
+    or the new @restaurants.ejs file
+
+*/
+.columns{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.rest-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    padding-bottom: 30px;
+    width: 800px;
+    place-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);  
+}
+
+.rest-grid .card{
+    box-shadow: 0 4px 8px rgba(58, 56, 56, 0.1);
+    text-align: center;
+    background-color:whitesmoke;
+    border: 1px solid black;
+    width: 200px;
+    height: 310px;
+    position: relative;
+    img{
+        /* width: 200px;
+        display: block;
+        margin: 0 auto 10px; */
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 4px;
+    }
+
+    p{
+        margin: 0px;
+    }
+}
+
+.delete-btn{
+    border: 0;
+    cursor: pointer;
+    align-items: right;
+    position:absolute;
+    bottom:293px;
+    left: 90%;
+}
+
+.delete-btn:hover{
+    background-color: red;
+    color: white;
+}
+
+/*
+
+    for @newRestaurant.html file
+
+    */
+.form-parent {
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: #fdf4e3;
+    padding: 20px;
+    border-radius: 10px;
+    justify-content: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);  
+}
+
+.add-heading {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-width: 400px;
+    margin: 40px auto;
+    align-items: center;
+    justify-content: center;
+}
+
+label {
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+input {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid ;
+    border-radius: 15px;
+    font-size: 16px;
+    width: 500px;
+}
+
+.form-button {
+    margin-top: 20px;
+    /* margin: 20px auto; */
+    padding: 10px;
+    background-color: rgb(47, 79, 130);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100px;
+}
+
+.form-button:hover {
+    background-color: rgb(61, 117, 197)
+}
